@@ -1,0 +1,48 @@
+
+.body {
+    -fx-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    -fx-background-color: #f8fafc;
+    -fx-font-weight: 400;
+    -fx-text-fill: #0f172a;
+}
+
+.logo {
+    /*-fx-font-size: clamp(1.5rem, 3vw, 3rem);*/
+    -fx-font-size: 50px;
+    -fx-text-fill: #10b981;
+    -fx-font-weight: 700;
+}
+
+.search-form {
+    -fx-background-color: #ffffff;
+    -fx-pref-width: 600px;
+}
+
+.page {
+    -fx-pref-width: 90%;
+    -fx-max-width: 1120px;
+    -fx-padding: 80px 32px 80px 32px;
+}
+
+.search-input {
+    -fx-max-width: 600px;
+    -fx-pref-width: 600px;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 25px;
+}
+
+.btn {
+    -fx-cursor: pointer;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #10b981;
+    /*-fx-border-style: hidden;*/
+    -fx-border-radius: 8px;
+    -fx-graphic-text-gap: 1px;
+    -fx-padding: 6px 12px 6px 12px;
+}
+
+.btn:hover {
+    -fx-background-color: #047857;
+}
+
+/*# sourceMappingURL=style.css.map */
