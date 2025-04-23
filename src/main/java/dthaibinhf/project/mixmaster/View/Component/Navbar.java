@@ -1,5 +1,6 @@
 package dthaibinhf.project.mixmaster.View.Component;
 
+import dthaibinhf.project.mixmaster.Controller.NavController;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -8,20 +9,25 @@ import javafx.scene.layout.HBox;
 import java.util.List;
 
 public class Navbar {
-    //Hbox in top section
+    /*Hbox in top section*/
     private final HBox HbNavBar;
     private final HBox HbLogoContainer;
     private final HBox HbLinkContainer;
-    //container
+    /*container*/
     private final BorderPane root;
-    //Node in navbar
+    /*Node in navbar*/
     private Label lbLogo;
     private Label lbHome;
     private Label lbAbout;
     private Label lbNewsletter;
 
+    /*controller*/
+    private NavController navController;
+
+
     public Navbar(BorderPane body) {
         root = body;
+        navController = new NavController();
 
         HbNavBar = new HBox();
         HbLogoContainer = new HBox();
@@ -97,7 +103,9 @@ public class Navbar {
         lbHome = new Label("Home");
         lbAbout = new Label("About");
         lbNewsletter = new Label("Newsletter");
-
+        navController.setLBHome(lbLogo);
+        navController.setLBHome(lbHome);
+        navController.setLbAbout(lbAbout);
     }
 
 }

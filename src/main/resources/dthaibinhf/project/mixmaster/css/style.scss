@@ -60,16 +60,13 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 /*Nav bar*/
 
 .navbar-center {
-  -fx-max-width: 1920px;
-  -fx-pref-width: 100%;
   -fx-alignment: center;
   -fx-padding: 10px 10px 10px 10px;
-
 }
 
 .logo-container {
   -fx-alignment: center-left;
-  -fx-pref-width: 960px;
+  -fx-pref-width: 800px;
   -fx-max-width: 960px;
   -fx-min-width: 160px;
 }
@@ -81,7 +78,7 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 }
 
 .links-container {
-  -fx-pref-width: 960px;
+  -fx-pref-width: 800px;
   -fx-max-width: 960px;
   -fx-min-width: 160px;
   -fx-alignment: center-right;
