@@ -3,7 +3,6 @@ package dthaibinhf.project.mixmaster.View.Component;
 import dthaibinhf.project.mixmaster.Controller.NavController;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 
 import java.util.List;
@@ -13,8 +12,6 @@ public class Navbar {
     private final HBox HbNavBar;
     private final HBox HbLogoContainer;
     private final HBox HbLinkContainer;
-    /*container*/
-    private final BorderPane root;
     /*Node in navbar*/
     private Label lbLogo;
     private Label lbHome;
@@ -25,8 +22,7 @@ public class Navbar {
     private NavController navController;
 
 
-    public Navbar(BorderPane body) {
-        root = body;
+    public Navbar() {
         navController = new NavController();
 
         HbNavBar = new HBox();
@@ -39,7 +35,6 @@ public class Navbar {
         configContainer();
 
         /*body add node*/
-        root.setTop(HbNavBar);
     }
 
     private void configContainer() {
@@ -106,6 +101,58 @@ public class Navbar {
         navController.setLBHome(lbLogo);
         navController.setLBHome(lbHome);
         navController.setLbAbout(lbAbout);
+        navController.setLbNewsletter(lbNewsletter);
     }
 
+    public HBox getHbNavBar() {
+        return HbNavBar;
+    }
+
+    public HBox getHbLogoContainer() {
+        return HbLogoContainer;
+    }
+
+    public HBox getHbLinkContainer() {
+        return HbLinkContainer;
+    }
+
+    public Label getLbLogo() {
+        return lbLogo;
+    }
+
+    public void setLbLogo(Label lbLogo) {
+        this.lbLogo = lbLogo;
+    }
+
+    public Label getLbHome() {
+        return lbHome;
+    }
+
+    public void setLbHome(Label lbHome) {
+        this.lbHome = lbHome;
+    }
+
+    public Label getLbAbout() {
+        return lbAbout;
+    }
+
+    public void setLbAbout(Label lbAbout) {
+        this.lbAbout = lbAbout;
+    }
+
+    public Label getLbNewsletter() {
+        return lbNewsletter;
+    }
+
+    public void setLbNewsletter(Label lbNewsletter) {
+        this.lbNewsletter = lbNewsletter;
+    }
+
+    public NavController getNavController() {
+        return navController;
+    }
+
+    public void setNavController(NavController navController) {
+        this.navController = navController;
+    }
 }

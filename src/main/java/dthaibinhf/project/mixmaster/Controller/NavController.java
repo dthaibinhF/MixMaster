@@ -2,6 +2,7 @@ package dthaibinhf.project.mixmaster.Controller;
 
 import dthaibinhf.project.mixmaster.View.About;
 import dthaibinhf.project.mixmaster.View.Home;
+import dthaibinhf.project.mixmaster.View.Newsletter;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -21,10 +22,13 @@ public class NavController {
         LbAbout.setOnMouseClicked(this::handleAboutNavigate);
     }
 
+    public void setLbNewsletter(Label button) {
+        LbNewsletter = button;
+        LbNewsletter.setOnMouseClicked(this::handleNewsletterNavigate);
+    }
+
     private void handleAboutNavigate(MouseEvent mouseEvent) {
-        System.out.println("About Navigate");
         Stage stage = getStage(LbAbout);
-        stage.setTitle("About of Mix Master");
         About aboutPage = new About(stage);
     }
 
@@ -33,7 +37,13 @@ public class NavController {
         Home homePage = new Home(stage);
     }
 
-    private Stage getStage(Label btn) {
-        return (Stage) btn.getScene().getWindow();
+    private void handleNewsletterNavigate(MouseEvent mouseEvent) {
+        Stage stage = getStage(LbNewsletter);
+        Newsletter newsletterPage = new Newsletter(stage);
     }
+
+    private Stage getStage(Label lbl) {
+        return (Stage) lbl.getScene().getWindow();
+    }
+
 }

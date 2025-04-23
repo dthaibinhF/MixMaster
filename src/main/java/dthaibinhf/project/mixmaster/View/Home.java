@@ -1,9 +1,11 @@
 package dthaibinhf.project.mixmaster.View;
 
+import dthaibinhf.project.mixmaster.View.Component.SearchForm;
 import dthaibinhf.project.mixmaster.View.Interface.Layout;
 import dthaibinhf.project.mixmaster.View.Interface.LayoutImpl;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Home {
@@ -26,7 +28,7 @@ public class Home {
         initiate(root);
 
         /*Stage*/
-        
+
         stage.setTitle("Mix Master");
         stage.show();
     }
@@ -36,6 +38,12 @@ public class Home {
     }
 
     private void configCenterSection(BorderPane root) {
+        VBox vbCenterPage = new VBox();
+        SearchForm searchForm = new SearchForm();
+
+
+        vbCenterPage.getChildren().add(searchForm.getHbSearchBox());
+        root.setCenter(vbCenterPage);
     }
 
 }
