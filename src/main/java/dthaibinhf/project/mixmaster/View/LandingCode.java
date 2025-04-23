@@ -48,6 +48,10 @@ public class LandingCode {
     private void initiate(BorderPane body) {
         configBody(body);
         configTopSection(body);
+        configCenterSection(body);
+    }
+
+    private void configCenterSection(BorderPane body) {
     }
 
     private void configBody(BorderPane body) {
@@ -65,6 +69,7 @@ public class LandingCode {
 
     private void addNavbar(BorderPane body) {
         Navbar navbar = new Navbar(body);
+
     }
 
     public Stage getStage() {
