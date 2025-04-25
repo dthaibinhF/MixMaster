@@ -1,6 +1,6 @@
 package dthaibinhf.project.mixmaster;
 
-import dthaibinhf.project.mixmaster.View.Home;
+import dthaibinhf.project.mixmaster.view.AppView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -11,6 +11,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Home home = new Home(primaryStage);
+        new AppView(primaryStage);
     }
 }
