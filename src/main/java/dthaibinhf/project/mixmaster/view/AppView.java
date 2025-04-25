@@ -12,7 +12,7 @@ public class AppView {
     private final AppViewModel viewModel = new AppViewModel();
 
     public AppView(Stage stage) {
-        configureLayout(stage);
+        configureLayout();
 
         // Bind center content to AppViewModel's current view
         root.centerProperty().bind(viewModel.currentViewProperty());
@@ -28,7 +28,7 @@ public class AppView {
         stage.show();
     }
 
-    private void configureLayout(Stage stage) {
+    private void configureLayout() {
         root.getStyleClass().add("body");
         root.prefWidthProperty().bind(scene.widthProperty());
         root.prefHeightProperty().bind(scene.heightProperty());
