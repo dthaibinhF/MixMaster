@@ -16,6 +16,7 @@ public class Navbar extends HBox {
     Label lbHome = new Label("Home");
     Label lbAbout = new Label("About");
     Label lbNewsletter = new Label("Newsletter");
+    List<Label> listLink = List.of(lbHome, lbAbout, lbNewsletter);
 
     public Navbar(AppViewModel viewModel) {
         this.viewModel = viewModel;
@@ -51,18 +52,27 @@ public class Navbar extends HBox {
 
     private void configureFunction() {
         lbHome.setOnMouseClicked(e -> {
-            System.out.println(viewModel.currentViewProperty().toString());
+            //remove class name nav-link-active
+            listLink.forEach(label -> {
+                label.getStyleClass().remove("nav-link-active");
+            });
+            //Set class name nav-link-active
+            lbHome.getStyleClass().add("nav-link-active");
             viewModel.navigateToHome();
         });
         lbAbout.setOnMouseClicked(e -> {
-            System.out.println(viewModel.currentViewProperty().toString());
+            listLink.forEach(label -> {
+                label.getStyleClass().remove("nav-link-active");
+            });
+            lbAbout.getStyleClass().add("nav-link-active");
             viewModel.navigateToAbout();
         });
         lbNewsletter.setOnMouseClicked(e -> {
-            System.out.println(viewModel.currentViewProperty().toString());
+            listLink.forEach(label -> {
+                label.getStyleClass().remove("nav-link-active");
+            });
+            lbNewsletter.getStyleClass().add("nav-link-active");
             viewModel.navigateToNewsletter();
         });
-
-
     }
 }

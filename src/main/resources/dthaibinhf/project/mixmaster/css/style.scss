@@ -55,7 +55,23 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
   -fx-background-color: $backgroundColor;
   -fx-font-weight: 400;
   -fx-text-fill: $textColor;
+  -fx-font-size: 16px;
 }
+
+.h3 {
+  -fx-font-size: 50;
+  -fx-font-weight: 400;
+  -fx-spacing: $letterSpacing;
+}
+
+.text {
+  -fx-text-fill: $grey-500;
+}
+
+.page {
+  -fx-max-width: 1000px;
+}
+
 
 /*Nav bar*/
 
@@ -87,7 +103,7 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 
 .nav-link {
   -fx-cursor: hand;
-  -fx-font-size: 16px;
+  -fx-font-size: 20;
   -fx-text-fill: $grey-900;
   -fx-padding: 8px 8px 8px 8px;
   -fx-spacing: 2px;
@@ -97,6 +113,7 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 
   -fx-text-fill: $primary-500;
 }
+
 
 /**Center**/
 
@@ -110,6 +127,24 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 /***Search Box***/
 .search-box {
   -fx-padding: 8px 8px 8px 8px;
+}
+
+.btn {
+  -fx-cursor: hand;
+  -fx-text-fill: $white;
+  -fx-background-color: $primary-500;
+  -fx-border-style: hidden;
+  -fx-border-radius: $borderRadius;
+  -fx-spacing: $letterSpacing;
+  -fx-padding: 6px 12px 6px 12px;
+  -fx-alignment: center;
+}
+
+.btn:hover {
+  -fx-background-color: $primary-700;
+}
+
+.search-field {
 
 }
 

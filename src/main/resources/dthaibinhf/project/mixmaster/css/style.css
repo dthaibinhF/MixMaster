@@ -8,6 +8,21 @@
   -fx-background-color: #f8fafc;
   -fx-font-weight: 400;
   -fx-text-fill: #0f172a;
+  -fx-font-size: 16px;
+}
+
+.h3 {
+  -fx-font-size: 50;
+  -fx-font-weight: 400;
+  -fx-spacing: 1px;
+}
+
+.text {
+  -fx-text-fill: #64748b;
+}
+
+.page {
+  -fx-max-width: 1000px;
 }
 
 /*Nav bar*/
@@ -39,7 +54,7 @@
 
 .nav-link {
   -fx-cursor: hand;
-  -fx-font-size: 16px;
+  -fx-font-size: 20;
   -fx-text-fill: #0f172a;
   -fx-padding: 8px 8px 8px 8px;
   -fx-spacing: 2px;
@@ -60,6 +75,21 @@
 /***Search Box***/
 .search-box {
   -fx-padding: 8px 8px 8px 8px;
+}
+
+.btn {
+  -fx-cursor: hand;
+  -fx-text-fill: #fff;
+  -fx-background-color: #10b981;
+  -fx-border-style: hidden;
+  -fx-border-radius: 4px;
+  -fx-spacing: 1px;
+  -fx-padding: 6px 12px 6px 12px;
+  -fx-alignment: center;
+}
+
+.btn:hover {
+  -fx-background-color: #047857;
 }
 
 /*# sourceMappingURL=style.css.map */
