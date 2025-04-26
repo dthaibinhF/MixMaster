@@ -19,7 +19,7 @@ public class AppViewModel {
     }
 
     public void navigateToHome() {
-        currentView.set(new HomeView().getView());
+        currentView.set(new HomeView(this).getView());
     }
 
     public void navigateToAbout() {

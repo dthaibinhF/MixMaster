@@ -2,6 +2,7 @@ package dthaibinhf.project.mixmaster.view.pages;
 
 import dthaibinhf.project.mixmaster.model.Cocktail;
 import dthaibinhf.project.mixmaster.view.component.SearchForm;
+import dthaibinhf.project.mixmaster.viewmodel.AppViewModel;
 import dthaibinhf.project.mixmaster.viewmodel.HomeViewModel;
 import javafx.application.Platform;
 import javafx.beans.property.ListProperty;
@@ -11,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
@@ -24,18 +26,23 @@ import java.util.List;
 import java.util.Map;
 
 public class HomeView {
+    //ViewModel
     private final HomeViewModel viewModel = new HomeViewModel();
+    private final AppViewModel appViewModel;
 
+    //Layout
     private final VBox view = new VBox();
     private final TilePane cocktailsList = new TilePane();
     private final ScrollPane scrollPane = new ScrollPane(cocktailsList); // Wrap TilePane in ScrollPane
-
+    //Nodes
     private final Label infoLabel = new Label("Welcome to MixMaster");
     private final Label errorLabel = new Label("Welcome to MixMaster");
+    //Data structure
     private final ListProperty<Cocktail> cocktails = new SimpleListProperty<>(FXCollections.observableArrayList());
     private final Map<String, Image> imageCache = new HashMap<>();
 
-    public HomeView() {
+    public HomeView(AppViewModel appViewModel) {
+        this.appViewModel = appViewModel;
         configureLayout();
         configureError();
         bindCocktails();
@@ -81,7 +88,8 @@ public class HomeView {
                             image = new Image(getClass().getResourceAsStream("/dthaibinhf/project/mixmaster/image/cocktail_left.png"));
                         }
                         imageCache.put(imageUrl, image); //Add to map
-                    } else { //image url is null then we use backup image in local
+                    } else {
+                        //image url is null then we use backup image in local
                         image = new Image(getClass().getResourceAsStream("/dthaibinhf/project/mixmaster/image/cocktail_left.png"));
                     }
                     //Save the loaded image to list
@@ -109,8 +117,13 @@ public class HomeView {
                 glassCocktail.getStyleClass().add("cocktail-glass");
                 Label infoCocktail = new Label(cocktail.getInfo());
                 infoCocktail.getStyleClass().add("cocktail-info");
+                Button detailsCocktail = new Button("Details");
+                detailsCocktail.getStyleClass().add("btn");
+                detailsCocktail.setOnAction(event -> {
+                    appViewModel.currentViewProperty().set(new CocktailView(cocktail, appViewModel).getView());
+                });
 
-                cocktailCard.getChildren().addAll(imageCocktail, nameCocktail, glassCocktail, infoCocktail);
+                cocktailCard.getChildren().addAll(imageCocktail, nameCocktail, glassCocktail, infoCocktail, detailsCocktail);
                 cocktailsList.getChildren().add(cocktailCard);
             }
 
@@ -148,6 +161,7 @@ public class HomeView {
         view.setPadding(new Insets(20));
         view.setAlignment(Pos.TOP_CENTER);
         view.getStyleClass().add("page");
+        VBox.setMargin(view, new Insets(20, 20, 20, 20));
         view.getChildren().addAll(infoLabel, new SearchForm(viewModel), cocktailsList, scrollPane);
     }
 

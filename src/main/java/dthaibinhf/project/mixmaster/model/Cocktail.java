@@ -1,5 +1,8 @@
 package dthaibinhf.project.mixmaster.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * strAlcoholic:info,
  * strCategory:category,
@@ -12,6 +15,7 @@ public class Cocktail {
     private String info;
     private String glass;
     private String instruction;
+    private List<String> ingredients;
 
     public Cocktail() {
         name = "";
@@ -19,14 +23,16 @@ public class Cocktail {
         info = "";
         glass = "";
         instruction = "";
+        ingredients = new ArrayList<>();
     }
 
-    public Cocktail(String name, String image, String info, String glass, String instruction) {
+    public Cocktail(String name, String image, String info, String glass, String instruction, List<String> ingredients) {
         this.name = name;
         this.image = image;
         this.info = info;
         this.glass = glass;
         this.instruction = instruction;
+        this.ingredients = ingredients;
     }
 
     public String getName() {
@@ -67,6 +73,14 @@ public class Cocktail {
 
     public void setInstruction(String instruction) {
         this.instruction = instruction;
+    }
+    
+    public List<String> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
     }
 
     @Override

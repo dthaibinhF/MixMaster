@@ -187,6 +187,29 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
   -fx-background-color: transparent;
 }
 
+.cocktail-detail-page {
+  -fx-max-width: 1000;
+  -fx-background-color: $white; /* Light gray background similar to the image */
+  -fx-padding: 20;
+}
+
+.field-label {
+  -fx-background-color: $primary-500; /* Light cyan background for the value boxes */
+  -fx-border-color: #b0bec5; /* Light border color */
+  -fx-border-radius: 5;
+  -fx-background-radius: 5;
+  -fx-font-weight: bold;
+  -fx-text-fill: $white; /* Dark text for the field names */
+  -fx-min-width: 100; /* Ensure consistent width for alignment */
+  -fx-letter-spacing: 5px;
+}
+
+.field-value {
+  -fx-padding: 5 10 5 10; /* Padding inside the value box */
+  -fx-text-fill: #333; /* Dark text for the values */
+  -fx-wrap-text: true; /* Ensure text wrapping */
+}
+
 
 
 
