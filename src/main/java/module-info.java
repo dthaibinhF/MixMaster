@@ -1,6 +1,5 @@
 module dthaibinhf.project.mixmaster {
     requires javafx.controls;
-    requires javafx.fxml;
     requires javafx.web;
 
     requires org.controlsfx.controls;
@@ -12,5 +11,6 @@ module dthaibinhf.project.mixmaster {
     requires org.json;
 
     opens dthaibinhf.project.mixmaster to javafx.fxml;
+
     exports dthaibinhf.project.mixmaster;
 }

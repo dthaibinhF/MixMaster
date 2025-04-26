@@ -69,7 +69,7 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 }
 
 .page {
-  -fx-max-width: 1000px;
+  -fx-max-width: 1400px;
 }
 
 
@@ -146,6 +146,45 @@ $shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 
 .search-field {
 
+}
+
+/*cocktail*/
+.cocktails-list {
+  -fx-background-color: transparent;
+  -fx-padding: 10;
+}
+
+.cocktail-card {
+  -fx-max-width: 1000px;
+  -fx-pref-width: 400px;
+  -fx-background-color: $white;
+  -fx-border-color: #ccc;
+  -fx-border-radius: $borderRadius;
+  -fx-border-width: 0;
+  -fx-padding: 10;
+  -fx-alignment: center;
+}
+
+.cocktail-name {
+  -fx-font-weight: 700;
+  -fx-font-size: 25px;
+}
+
+.cocktail-glass {
+  -fx-font-size: 20px;
+}
+
+.cocktail-info {
+  -fx-font-size: 16px;
+  -fx-text-fill: $grey-500;
+}
+
+.scroll-pane {
+  -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+  -fx-background-color: transparent;
 }
 
 
